@@ -36,6 +36,15 @@ This project goes over docker usage, docker is a containerization program and mo
         * go to account settings
         * on the side bar go to persoal access token
         * click generate new token
-        * name it and scope it then hit generate
+        * name it and scope(read and write for this project) it then hit generate
 ## part 2
-
+1. configureing repo secrets
+    * in the top banner click settings
+    * under secuerity click secerts and varibles
+    * then in the dropdown click actions
+    * hit the bright green button that says "new repository secret"
+    * name it "DOCKER_TOKEN"
+    * in the value paste the PAT from before
+    * do the same for the docker username
+2.
+(.gethub/workflows)[.gethub/workflows]
