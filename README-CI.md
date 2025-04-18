@@ -47,4 +47,4 @@ This project goes over docker usage, docker is a containerization program and mo
     * in the value paste the PAT from before
     * do the same for the docker username
 2.
-(project workflows)[.github/workflows]
+(project workflows)[.github/workflows/main.yml]
