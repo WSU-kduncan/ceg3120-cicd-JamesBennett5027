@@ -11,7 +11,7 @@ This project goes over docker usage, docker is a containerization program and mo
 2. manually setting up the container
     * first docker pull the base container
     * then run docker run -it "imagename":"imagetag" bash
-        * for this app it is docker run -it -pc4200:4200 node:18-bullseye
+    * for this app it is docker run -it -pc4200:4200 node:18-bullseye
     * (all the fallowing steps are for this app specifically) run npm install -g @angular/cli
     * on your machine run docker cp /root/ceg3120-cicd-JamesBennett5027/angular-site "name of container":/app
     * cd into angular/wsu-hw-ng and then run npm install
@@ -38,3 +38,4 @@ This project goes over docker usage, docker is a containerization program and mo
         * click generate new token
         * name it and scope it then hit generate
 ## part 2
+
