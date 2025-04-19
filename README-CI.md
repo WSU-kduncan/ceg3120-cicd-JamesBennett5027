@@ -1,6 +1,8 @@
 # Project 4
 ## overview
-This project goes over docker usage, docker is a containerization program and most things run on containers at this point so not learning containerization is not an option
+This project goes over docker usage, and continuous integration. the tools of this project are node git/github and docker hub
+daigram:
+[diagram](images/CI.jpeg)
 ## part 1
 1. how to install
     * on linux
@@ -37,6 +39,9 @@ This project goes over docker usage, docker is a containerization program and mo
         * on the side bar go to persoal access token
         * click generate new token
         * name it and scope(read and write for this project) it then hit generate
+    3. pushing
+        * to push first name an image using docker build -t username/reponame
+        * then run docker push image name
 ## part 2
 1. configureing repo secrets
     * in the top banner click settings
@@ -46,5 +51,9 @@ This project goes over docker usage, docker is a containerization program and mo
     * name it "DOCKER_TOKEN"
     * in the value paste the PAT from before
     * do the same for the docker username
-2.
+2. CI with github actions
+    * summery of how the workflow works
+
+        on a push or pull request to the main branch the action checks out the repo, then uses the docker meta action which generates meta data for the image then logs into docker hub then pushes to a repository
+    * to test it worked after a push a yellow dot will apper click that then you will see the commands running and any errors they throw
 [project workflow](.github/workflows/main.yml)
