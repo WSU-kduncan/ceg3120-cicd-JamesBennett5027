@@ -21,7 +21,6 @@ jobs:
           images: bennett5027/bennett-ceg3120
           tags: |
             type semver,pattern={{major}}.{{minor}}
-            type semver,pattern={{major}}
             type raw,value=latest
       -
         name: Login to DockerHub
