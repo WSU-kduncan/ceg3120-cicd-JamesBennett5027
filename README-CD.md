@@ -66,3 +66,5 @@ to test if the image simply pull the image and run it
     4. pull the new image
     5. run the new image
 ### Scripting Application Refresh
+[docker refresh script](codewritenforproject/refresh.sh)
+to test I just copied and pasted the script and ran it
