@@ -1,0 +1,11 @@
+[Unit]
+Description=Simple Webhook Listener
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/webhook -hooks /etc/webhook/hooks.json -port 9000
+Restart=always
+User=webhookuser
+
+[Install]
+WantedBy=multi-user.target

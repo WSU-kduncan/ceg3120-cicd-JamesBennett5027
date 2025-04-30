@@ -68,3 +68,21 @@ to test if the image simply pull the image and run it
 ### Scripting Application Refresh
 [docker refresh script](codewritenforproject/refresh.sh)
 to test I just copied and pasted the script and ran it
+## Configuring a webhook Listener
+### installing webhooks
+1. run sudo apt install webhook
+2. to verify webhook instaltion run which webhook
+3. the webhook definition file is a file that discibes the id, script and trigger conditions of webhooks
+4. to verify the webhook file was loaded you run sudo webhook -hooks /home/ubuntu/hooks.json -verbose that will tell you if the code was loaded by webhooks
+5. to verify webhooks workes right curl localhost port 9000 /hooks/'hookid' and when you curl it shows the output on the terminal
+[link to the def file](codewritenforproject/hook.json)
+### Configureing a payload sender
+1. I chose dockerhub because I do not want to activate my webhook erroneously if the build and push fails
+2. to set up webhooks go to the repo between collaborators and settings there is a button called webhooks on that menu you can name your hook it dosen't do anything and the URL of the webhook
+3. it trigers on a push to the diockerhub repo
+4. to verify it works make a push dockerhub repo while webhooks is runing i verbose mode
+### Configure a webhook Service
+1.
+2.
+3.
+4.
