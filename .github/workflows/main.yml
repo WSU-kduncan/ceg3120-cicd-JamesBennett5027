@@ -41,4 +41,5 @@ jobs:
       -
         name: Trigger AWS Webhook
         run: |
-          curl -X POST ${{ secrets.PLEASE }}
+          curl -X POST "http://http://3.220.32.176/:9000/hooks/dockerhub-deploy" \
+          -H "X-Hook-Secret: ${{ secrets.PLEASE }}"
