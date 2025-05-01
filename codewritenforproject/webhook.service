@@ -3,9 +3,9 @@ Description=Simple Webhook Listener
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/webhook -hooks /etc/webhook/hooks.json -port 9000
+ExecStart=/usr/bin/webhook -hooks /home/ubuntu/hooks.json -ip 0.0.0.0 -port 9000
 Restart=always
-User=webhookuser
+User=root
 
 [Install]
 WantedBy=multi-user.target

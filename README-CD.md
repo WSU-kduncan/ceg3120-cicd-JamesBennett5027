@@ -1,4 +1,6 @@
 # Project 5
+## project overview
+the goal of this project is to do some continuous deployment the tools of this project are docker, git and AWS
 ## Task one
 ### generating tags
 1.  to list tags run the command "git tag"
@@ -76,13 +78,18 @@ to test I just copied and pasted the script and ran it
 4. to verify the webhook file was loaded you run sudo webhook -hooks /home/ubuntu/hooks.json -verbose that will tell you if the code was loaded by webhooks
 5. to verify webhooks workes right curl localhost port 9000 /hooks/'hookid' and when you curl it shows the output on the terminal
 [link to the def file](codewritenforproject/hook.json)
+
+generitive ai used to make def file
 ### Configureing a payload sender
 1. I chose dockerhub because I do not want to activate my webhook erroneously if the build and push fails
 2. to set up webhooks go to the repo between collaborators and settings there is a button called webhooks on that menu you can name your hook it dosen't do anything and the URL of the webhook
 3. it trigers on a push to the diockerhub repo
 4. to verify it works make a push dockerhub repo while webhooks is runing i verbose mode
 ### Configure a webhook Service
-1.
-2.
-3.
-4.
+1. a webhook service file contains 3 sectons unit, service and install. unit has a short discription on what the file does and when it goes off, service has the path of the command you want ran the user running the command and the restart condition and install which starts the service every time the system boots in multiuser mode
+2. to start the service run  sudo systemctl start webhook.service then to enable the service run don't forget to run  sudo systemctl start webhook.service
+3. to verify it is working run  systemctl status webhook.service
+4. [sevice file](codewritenforproject/webhook.service)
+generitive ai used to make service file
+## project diagram
+[CDimage](images/CD.jpeg)
