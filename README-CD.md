@@ -1,6 +1,6 @@
 # Project 5
 ## project overview
-the goal of this project is to do some continuous deployment the tools of this project are docker, git and AWS the one thing in this project that is not working is the payload sender
+the goal of this project is to do some continuous deployment the tools of this project are docker, git and AWS
 ## Task one
 ### generating tags
 1.  to list tags run the command "git tag"
@@ -50,6 +50,8 @@ to test if the image simply pull the image and run it
 
 ```
 5.  VpcId: !Ref VPC associates the SG with the VPC, ruel one allows SSH into the subnet ruel 2 allows ssh from wsu ruel 3 allows ssh from my house and the final rule allows http from anywhere
+
+cloud formation template from earlier in the semester
 ### docker on the EC2
 1. run sudo apt-get docker.io
 2. there are no other dependencies
@@ -81,9 +83,14 @@ to test I just copied and pasted the script and ran it
 
 generitive ai used to make def file
 ### Configureing a payload sender
-1. I chose dockerhub because I do not want to activate my webhook erroneously if the build and push fails
-2. to set up webhooks go to the repo between collaborators and settings there is a button called webhooks on that menu you can name your hook it dosen't do anything and the URL of the webhook
-3. it trigers on a push to the diockerhub repo
+1. I chose github because I tried dockerhub at first but dockerhub did not want to work so then I added a line to the git action from earlier
+2. to set up git as a payload sender add this to the action
+```
+  name: Trigger AWS Webhook
+        run: |
+          curl -X POST http://3.220.32.176:9000/hooks/refresh?token=supersecrettoken
+```
+3. it trigers on a push of a tag
 4. to verify it works make a push dockerhub repo while webhooks is runing i verbose mode
 ### Configure a webhook Service
 1. a webhook service file contains 3 sectons unit, service and install. unit has a short discription on what the file does and when it goes off, service has the path of the command you want ran the user running the command and the restart condition and install which starts the service every time the system boots in multiuser mode
