@@ -1,6 +1,6 @@
 # Project 5
 ## project overview
-the goal of this project is to do some continuous deployment the tools of this project are docker, git and AWS
+the goal of this project is to do some continuous deployment the tools of this project are docker, git and AWS the one thing in this project that is not working is the payload sender
 ## Task one
 ### generating tags
 1.  to list tags run the command "git tag"
