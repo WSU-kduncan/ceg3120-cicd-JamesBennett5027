@@ -41,4 +41,4 @@ jobs:
       -
         name: Trigger AWS Webhook
         run: |
-          curl -X POST ${{secrets.PLEASE}}
+          curl ${{secrets.PLEASE}}
