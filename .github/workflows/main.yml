@@ -40,4 +40,4 @@ jobs:
       -
         name: hook
         uses: enflo/curl-action@master
-        with: ${{ secrets.please }}
+        with: ${{ secrets.PLEASE }}
